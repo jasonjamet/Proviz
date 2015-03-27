@@ -1,0 +1,7 @@
+#Compilation C++
+
+bison -d nomprogramme.ypp
+flex nomprogramme.lex
+g++ -c lex.yy.c -o lex.yy.o
+g++ -c nomprogramme.tab.cpp -o nomprogramme.tab.o
+g++ -o nomprogramme.lex.yy.o nomprogramme.tab.o -lfl
