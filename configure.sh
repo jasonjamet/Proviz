@@ -1,6 +1,6 @@
 #!/bin/bash
 #Compilation C++
-
+rm Proviz.tab.* lex.yy.*
 bison -d Proviz.ypp
 flex Proviz.lex
 g++ -c lex.yy.c -o lex.yy.o

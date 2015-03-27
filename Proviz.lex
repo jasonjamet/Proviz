@@ -6,6 +6,14 @@
 separateurs     [ \t]+
 chiffre         [0-9]
 entier          {chiffre}+
+const
+variable
+constInt
+string
+separator
+operator
+comment
+
 
 %%
 
