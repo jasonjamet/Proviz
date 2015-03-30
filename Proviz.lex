@@ -4,16 +4,18 @@
 %}
 
 separateurs     [ \t]+
-chiffre         [0-9]
+chiffre
 entier          {chiffre}+
-const
-variable
-constInt
-string
-separator
-operator
-comment
-
+const           [a-z]([a-z|A-Z|0-9])* %Maybe this didnt work
+variable        [A-Z]([a-z|A-Z|0-9])*
+constInt        [0-9]+
+string          \"([^"]|\\\")*\"
+conjunction     ,
+separator       :\-
+end             .
+operator        [\+\-\*\/]
+compare         (\<|\<\=|\=\=|\>\=|\>|\!\=)
+comment         %.*|\/\*([^\*]|\*[^\/])*\*+\/   %Maybe this didnt work
 
 %%
 
